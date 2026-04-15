@@ -1,12 +1,16 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace SecureChat.Server.Database.Models;
 
 public class Message
 {
     public int Id { get; init; }
+    
+    [StringLength(3000)]
     public required string Content { get; init; }
     public required DateTime Created { get; init; }
     public int SenderId { get; init; }
-    public User Sender { get; init; }
+    public User? Sender { get; init; }
     public int ReceiverId { get; init; }
-    public User Receiver { get; init; }
+    public User? Receiver { get; init; }
 }

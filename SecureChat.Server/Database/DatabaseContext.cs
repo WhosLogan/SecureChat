@@ -7,4 +7,7 @@ public class DatabaseContext : DbContext
 {
     public DbSet<User> Users { get; set; }
     public DbSet<Message> Messages { get; set; }
+    
+    protected override void OnConfiguring(DbContextOptionsBuilder options)
+        => options.UseSqlite("Data Source=server.db");
 }
