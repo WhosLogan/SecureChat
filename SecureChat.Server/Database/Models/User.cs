@@ -9,7 +9,7 @@ public class User
     [StringLength(50)]
     public required string Username { get; init; }
     
-    //TODO: Find teh actual string length of the two below fields
+    //TODO: Find the actual string length of the two below fields
     [StringLength(50)]
     public required string Password { get; set; }
     
